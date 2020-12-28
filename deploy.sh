@@ -7,6 +7,8 @@ ruby generate-site.rb ENV=production
 echo "Moving production code to temp-generated-stream-overlay"
 cp -a generated/. ../temp-generated-stream-overlay
 
+git checkout .
+
 echo "checking out static-site"
 git checkout static-site
 

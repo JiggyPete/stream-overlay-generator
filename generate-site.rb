@@ -10,7 +10,7 @@ end
 def relative_path(path)
   result = ""
   result = "/stream-overlay-generator" if ARGV[0] == "ENV=production"
-  result += path
+  result += "/#{path}"
 end
 
 def write_root_index(overlay_templates)

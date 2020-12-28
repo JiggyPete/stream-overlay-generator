@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="<%= relative_path("/javascript/speaker.js") %>"></script>
-    <script type="text/javascript" src="<%= relative_path("/javascript/speakersList.js") %>"></script>
-    <script type="text/javascript" src="<%= relative_path("/javascript/overlaysView.js") %>"></script>
-    <script type="text/javascript" src="<%= relative_path("/javascript/formView.js") %>"></script>
+    <script type="text/javascript" src="<%= relative_path("javascript/speaker.js") %>"></script>
+    <script type="text/javascript" src="<%= relative_path("javascript/speakersList.js") %>"></script>
+    <script type="text/javascript" src="<%= relative_path("javascript/overlaysView.js") %>"></script>
+    <script type="text/javascript" src="<%= relative_path("javascript/formView.js") %>"></script>
 
     <style>
       body {
@@ -34,7 +34,7 @@
     <h1><%= overlay_template["title"] %> Overlay Generator
 
     <% unless overlay_template["title"].nil? %>
-      <img class="streamyard-icon" src="/<%= relative_path( overlay_template["icon"] ) %>"></img>
+      <img class="streamyard-icon" src="<%= relative_path( overlay_template["icon"] ) %>"></img>
     <% end %>
     </h1>
 
@@ -147,7 +147,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "<%= relative_path("/images/overlay.png") %>"
+        Overlay.path = "<%= relative_path("images/overlay.png") %>"
         let speakerJSON = <%= overlay_template["speakers"].to_json || "{}" %>;
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
