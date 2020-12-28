@@ -1,3 +1,5 @@
+ruby generate-site.rb ENV=production
+
 rm -rf ../temp-generated-stream-overlay
 mkdir ../temp-generated-stream-overlay
 
