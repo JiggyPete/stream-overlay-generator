@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Comfortaa';
+        padding: 2em;
+      }
+
+      .streamyard-icon {
+        width: 4em;
+        height: 3em;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CFP Day Stream Overlay Generators</h1>
+      <br/>
+      <table>
+        <% overlay_templates.map do |template| %>
+          <tr>
+            <td>
+              <img class="streamyard-icon" src="<%= template["icon"] %>"></img>
+            </td>
+            <td>
+              <a href="/<%= template["path"] %>"><%= template["title"] %></a>
+            </td>
+          </tr>
+          <% end %>
+      </table>
+
+  </body>
+</html>

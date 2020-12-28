@@ -1,0 +1,320 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <style>
+
+      body {
+        font-family: 'Comfortaa';
+      }
+
+      .page {
+        margin: 3em;
+      }
+
+      .form {
+        border: 1px solid lightgray;
+        padding: 2em;
+        width: 800px;
+      }
+
+      table {
+        width: 800px;
+      }
+
+      .label-column {
+        width: 20%;
+      }
+
+      .input-column {
+        width: 80%;
+      }
+
+      #start-times {
+        height: 8em;
+      }
+
+
+    </style>
+  </head>
+  <body class="page">
+    <h1>CFP Day Stream Overlay Generator</h1>
+</a>
+    <br/>
+
+    Right click on the image below and select "Save As"
+    <br/>
+    <canvas id="myCanvas" width="1280" height="780" style="border:1px solid #d3d3d3;"></canvas>
+    <br/>
+    <br/>
+    <table>
+      <tr>
+        <td class="label-column">
+          <label>Load a square photo:</label>
+        </td>
+        <td class="input-column">
+          <input type="file" id="picture"></input>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>Continent:</label>
+        </td>
+        <td class="input-column">
+          <select id="continent">
+            <option>Australia / Oceania</option>
+            <option>Asia</option>
+            <option>Africa</option>
+            <option>Europe</option>
+            <option>North America</option>
+            <option>Sudamerica</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>Speaker name:</label>
+        </td>
+        <td class="input-column">
+          <input type="text" id="name"></input>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>Twitter:</label>
+        </td>
+        <td class="input-column">
+          <input type="text" id="twitter"></input>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>Talk title:</label>
+        </td>
+        <td class="input-column">
+          <input type="text" id="talk"></input>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>Start times:</label>
+        </td>
+        <td class="input-column">
+          <textarea id="start-times" placeholder="- West most time & zone
+- Optional central time & zone
+- East most time & zone"></textarea>
+        </td>
+      </tr>
+    </table>
+    <br/>
+
+    <h2>Speaker name properties</h2>
+    <table>
+      <tr>
+        <td class="label-column">
+          <label>Font size:</label>
+        </td>
+        <td class="input-column">
+          <input id="name--font-size" type="text" placeholder="40px">
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>X:</label>
+        </td>
+        <td class="input-column">
+          <input id="name--x" type="NUMBER" min="0" step="1" value="450" size="6">
+        </td>
+      <tr>
+        <td class="label-column">
+          <label>Y:</label>
+        </td>
+        <td class="input-column">
+          <input id="name--y" type="NUMBER" min="0" step="1" value="90" size="6">
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+
+    <h2>Twitter properties</h2>
+    <table>
+      <tr>
+        <td class="label-column">
+          <label>Font size:</label>
+        </td>
+        <td class="input-column">
+          <input id="twitter--font-size" type="text" placeholder="25px">
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>X:</label>
+        </td>
+        <td class="input-column">
+          <input id="twitter--x" type="NUMBER" min="0" step="1" value="450" size="6">
+        </td>
+      <tr>
+        <td class="label-column">
+          <label>Y:</label>
+        </td>
+        <td class="input-column">
+          <input id="twitter--y" type="NUMBER" min="0" step="1" value="130" size="6">
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+    <h2>Talk properties</h2>
+    <table>
+      <tr>
+        <td class="label-column">
+          <label>Font size:</label>
+        </td>
+        <td class="input-column">
+          <input id="talk--font-size" type="text" placeholder="20px">
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>X:</label>
+        </td>
+        <td class="input-column">
+          <input id="talk--x" type="NUMBER" min="0" step="1" value="450" size="6">
+        </td>
+      <tr>
+        <td class="label-column">
+          <label>Y:</label>
+        </td>
+        <td class="input-column">
+          <input id="talk--y" type="NUMBER" min="0" step="1" value="200" size="6">
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+
+    <h2>Start time properties</h2>
+    <table>
+      <tr>
+        <td class="label-column">
+          <label>Font size:</label>
+        </td>
+        <td class="input-column">
+          <input id="start-times--font-size" type="text" placeholder="25px">
+        </td>
+      </tr>
+      <tr>
+        <td class="label-column">
+          <label>X:</label>
+        </td>
+        <td class="input-column">
+          <input id="start-times--x" type="NUMBER" min="0" step="1" value="530" size="6">
+        </td>
+      <tr>
+        <td class="label-column">
+          <label>Y:</label>
+        </td>
+        <td class="input-column">
+          <input id="start-times--y" type="NUMBER" min="0" step="1" value="330" size="6">
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="speaker.js"></script>
+    <script type="text/javascript" src="card_view.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+      $(document).ready(function() {
+        function setupFormListeners(speaker) {
+          $( "#name" ).change(function(event) {
+            speaker.setName(event.target.value)
+          });
+          $( "#name--font-size" ).change(function(event) {
+            speaker.setNameFontSize(event.target.value)
+          });
+          $( "#name--x" ).change(function(event) {
+            speaker.setNameX(event.target.value)
+          });
+          $( "#name--y" ).change(function(event) {
+            speaker.setNameY(event.target.value)
+          });
+
+          $( "#talk" ).change(function(event) {
+            speaker.setTalk(event.target.value)
+          });
+          $( "#talk--font-size" ).change(function(event) {
+            speaker.setTalkFontSize(event.target.value)
+          });
+          $( "#talk--x" ).change(function(event) {
+            speaker.setTalkX(event.target.value)
+          });
+          $( "#talk--y" ).change(function(event) {
+            speaker.setTalkY(event.target.value)
+          });
+
+
+          $( "#twitter" ).change(function(event) {
+            speaker.setTwitter(event.target.value)
+          });
+          $( "#twitter--font-size" ).change(function(event) {
+            speaker.setTwitterFontSize(event.target.value)
+          });
+          $( "#twitter--x" ).change(function(event) {
+            speaker.setTwitterX(event.target.value)
+          });
+          $( "#twitter--y" ).change(function(event) {
+            speaker.setTwitterY(event.target.value)
+          });
+
+          $( "#continent" ).change(function(event) {
+            value = event.target.selectedOptions[0].value
+            speaker.setContinent(value)
+          });
+
+          $( "#start-times" ).change(function(event) {
+            speaker.setStartTimes(event.target.value)
+          });
+          $( "#start-times--font-size" ).change(function(event) {
+            speaker.setStartTimesFontSize(event.target.value)
+          });
+          $( "#start-times--x" ).change(function(event) {
+            speaker.setStartTimesX(event.target.value)
+          });
+          $( "#start-times--y" ).change(function(event) {
+            speaker.setStartTimesY(event.target.value)
+          });
+        }
+
+        if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
+          alert('The File APIs are not fully supported in this browser.');
+        } else {
+
+          //this function is called when the input loads an image
+          function renderImage(file){
+            var reader = new FileReader();
+            reader.onload = function(event){
+              the_url = event.target.result
+              speaker.setPicture( the_url )
+            }
+
+            //when the file is read it triggers the onload event above.
+            reader.readAsDataURL(file);
+          }
+
+
+          //watch for change on the
+          $( "#picture" ).change(function() {
+            renderImage(this.files[0])
+          });
+        }
+
+        let speaker = new Speaker()
+        let cardView = new CardView(speaker)
+        setupFormListeners(speaker)
+      })
+    </script>
+  </body>
+</html>
