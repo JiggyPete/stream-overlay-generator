@@ -49,7 +49,8 @@ let OverlaysView = class {
         // context.drawImage(img, speaker.overlayX(), speaker.overlayY(), speaker.overlayWidth(), speaker.overlayHeight());
         context.drawImage(img, speaker.overlayX(), speaker.overlayY(),);
     }
-    img.src = "/images/overlay.png"
+
+    img.src = Overlay.path
   }
 
   _drawName(speaker, context) {

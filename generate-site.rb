@@ -1,10 +1,16 @@
-require 'yaml'
-require 'fileutils'
-require 'erb'
-require 'json'
+require "yaml"
+require "fileutils"
+require "erb"
+require "json"
 
 def output_path(path)
   "generated/#{path}"
+end
+
+def relative_path(path)
+  result = ""
+  result = "/stream-overlay-generator" if ARGV[0] == "ENV=production"
+  result += path
 end
 
 def write_root_index(overlay_templates)
