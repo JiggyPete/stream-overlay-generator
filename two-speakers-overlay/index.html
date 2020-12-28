@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="/javascript/speaker.js"></script>
-    <script type="text/javascript" src="/javascript/speakersList.js"></script>
-    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
-    <script type="text/javascript" src="/javascript/formView.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/formView.js"></script>
 
     <style>
       body {
@@ -34,7 +34,7 @@
     <h1>Two Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/images/streamyard/2-speakers.png"></img>
+      <img class="streamyard-icon" src="//stream-overlay-generatorimages/streamyard/2-speakers.png"></img>
     
     </h1>
 
@@ -143,11 +143,11 @@
         </tr>
       </table>
 
-
-
     </div>
     <script type="text/javascript">
       $(document).ready(function() {
+        Overlay = {}
+        Overlay.path = "/stream-overlay-generator/images/overlay.png"
         let speakerJSON = [{"id":1,"name":{"text":"First Speaker","font-and-size":"25px Comfortaa","x":"100","y":"540"},"twitter":{"text":"@1st-speaker","font-and-size":"25px Comfortaa","x":"340","y":"540"},"overlay":{"x":"80","y":"500"}},{"id":2,"name":{"text":"Second Speaker","font-and-size":"25px Comfortaa","x":"740","y":"540"},"twitter":{"text":"@2nd-speaker","font-and-size":"25px Comfortaa","x":"970","y":"540"},"overlay":{"x":"720","y":"500"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
