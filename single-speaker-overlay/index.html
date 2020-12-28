@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/javascript/formView.js"></script>
+
+    <style>
+      body {
+        font-family: 'Comfortaa';
+        padding: 3em;
+      }
+
+      h1.streamyard-icon {
+        width: 4em;
+        height: 3em;
+      }
+
+      #form, table {
+        margin-top: 2em;
+        width: 640px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Back to All Generators</a>
+    </nav>
+    <h1>Single Speaker Overlay Generator
+
+    
+      <img class="streamyard-icon" src="/images/streamyard/single-speaker.png"></img>
+    
+    </h1>
+
+    <br/>
+    Right click on the image below and select "Save As"
+    <br/>
+    <canvas id="myCanvas" width="1280" height="780" style="border:1px solid #d3d3d3;"></canvas>
+    <br/>
+
+
+    <div id="form">
+      <select id="speakers-dropdown"></select>
+
+      <table>
+        <tr>
+          <td class="label-column">
+            <label>Speaker name:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="name" model-attribute-name="nameValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Twitter:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="twitter" model-attribute-name="twitterValue"></input>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Name:</h2>
+      <table>
+        <tr>
+          <td class="label-column">
+            <label>X:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="nameX" model-attribute-name="nameXValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Y:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="nameY" model-attribute-name="nameYValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Font and Size:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="nameFontAndSize" model-attribute-name="nameFontAndSizeValue"></input>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Twitter:</h2>
+      <table>
+        <tr>
+          <td class="label-column">
+            <label>X:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="twitterX" model-attribute-name="twitterXValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Y:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="twitterY" model-attribute-name="twitterYValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Font and Size:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="twitterFontAndSize" model-attribute-name="twitterFontAndSizeValue"></input>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Overlay:</h2>
+      <table>
+        <tr>
+          <td class="label-column">
+            <label>X:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayX" model-attribute-name="overlayXValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Y:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayY" model-attribute-name="overlayYValue"></input>
+          </td>
+        </tr>
+      </table>
+
+
+
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        let speakerJSON = [{"id":1,"name":{"text":"Speaker","font-and-size":"25px Comfortaa","x":"20","y":"640"},"twitter":{"text":"@speaker","font-and-size":"25px Comfortaa","x":"300","y":"640"},"overlay":{"x":"0","y":"600"}}];
+        let speakersList = new SpeakersList(speakerJSON);
+        let overlaysView = new OverlaysView(speakersList);
+        let formView = new FormView(speakersList);
+      } )
+    </script>
+  </body>
+</html>
