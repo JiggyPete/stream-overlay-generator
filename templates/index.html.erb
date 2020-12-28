@@ -22,10 +22,10 @@
         <% overlay_templates.map do |template| %>
           <tr>
             <td>
-              <img class="streamyard-icon" src="<%= template["icon"] %>"></img>
+              <img class="streamyard-icon" src="<%= relative_path(template["icon"]) %>"></img>
             </td>
             <td>
-              <a href="/<%= template["path"] %>"><%= template["title"] %></a>
+              <a href="/<%= relative_path(template["path"]) %>"><%= template["title"] %></a>
             </td>
           </tr>
           <% end %>
