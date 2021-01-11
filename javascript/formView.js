@@ -71,7 +71,9 @@ let FormView = class {
       "twitterY",
       "twitterFontAndSize",
       "overlayX",
-      "overlayY"
+      "overlayY",
+      "overlayWidth",
+      "overlayHeight"
     ]
   }
 

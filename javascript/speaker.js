@@ -70,13 +70,13 @@ let Speaker = class {
     return this.overlayYValue
   }
 
-  // overlayWidth() {
-  //   return this.overlayWidthValue
-  // }
+  overlayWidth() {
+    return this.overlayWidthValue
+  }
 
-  // overlayHeight() {
-  //   return this.overlayHeightValue
-  // }
+  overlayHeight() {
+    return this.overlayHeightValue
+  }
 
   addChangeListener(listener) {
     this.listener = listener;

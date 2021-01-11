@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1281.859" height="116.785" viewBox="0 0 1281.859 116.785">
+  <g id="overlay_big" transform="translate(0.5 -663.965)">
+    <g id="overlay_big-2" data-name="overlay_big">
+      <g id="Group_3" data-name="Group 3">
+        <g id="Group_2" data-name="Group 2">
+          <path id="Path_32" data-name="Path 32" d="M0,0,651.063-.42" transform="translate(626.5 764.5)" fill="none" stroke="#fffe80" stroke-linecap="round" stroke-width="6"/>
+          <path id="Path_31" data-name="Path 31" d="M0,0,568.859.126" transform="translate(709.5 684.5)" fill="none" stroke="#fffe80" stroke-linecap="round" stroke-width="6"/>
+          <g id="Overlay2">
+            <path id="Path_18" data-name="Path 18" d="M0,0H653V74.016H0Z" transform="translate(627 686.984)"/>
+            <path id="Path_17" data-name="Path 17" d="M0,.469,717.913.9,611.095,107.786,0,108.5Z" transform="translate(4.596 667.5)" fill="#ffff80"/>
+          </g>
+          <line id="Line_9" data-name="Line 9" x2="723" transform="translate(2.5 667.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="6"/>
+          <path id="Path_30" data-name="Path 30" d="M3.662,109.714,115,0" transform="translate(611.5 667.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="5"/>
+          <line id="Line_13" data-name="Line 13" x2="612" transform="translate(2.5 777.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="6"/>
+          <path id="Path_29" data-name="Path 29" d="M1.188,79.457,81.6-.437" transform="translate(634.5 684.5)" fill="none" stroke="#fffe80" stroke-linecap="round" stroke-width="5"/>
+        </g>
+        <line id="Line_14" data-name="Line 14" y2="109" transform="translate(2.5 667.5)" fill="none" stroke="#000" stroke-width="6"/>
+        <line id="Line_15" data-name="Line 15" y2="76" transform="translate(1277.5 686.5)" fill="none" stroke="#fffe80" stroke-width="6"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -41,7 +41,7 @@
     <br/>
     Right click on the image below and select "Save As"
     <br/>
-    <canvas id="myCanvas" width="1280" height="780" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="myCanvas" width="1280" height="720" style="border:1px solid #d3d3d3;"></canvas>
     <br/>
 
 
@@ -51,7 +51,7 @@
       <table>
         <tr>
           <td class="label-column">
-            <label>Speaker name:</label>
+            <label>Speaker name and pronouns:</label>
           </td>
           <td class="input-column">
             <input type="text" id="name" model-attribute-name="nameValue"></input>
@@ -141,13 +141,29 @@
             <input type="text" id="overlayY" model-attribute-name="overlayYValue"></input>
           </td>
         </tr>
+        <tr>
+          <td class="label-column">
+            <label>Width:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayWidth" model-attribute-name="overlayWidthValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Height:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayHeight" model-attribute-name="overlayHeightValue"></input>
+          </td>
+        </tr>
       </table>
 
     </div>
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "/stream-overlay-generator/images/overlay.png"
+        Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
         let speakerJSON = [{"id":1,"name":{"text":"First Speaker","font-and-size":"25px Comfortaa","x":"20","y":"640"},"twitter":{"text":"@speaker","font-and-size":"25px Comfortaa","x":"300","y":"640"},"overlay":{"x":"0","y":"600"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);

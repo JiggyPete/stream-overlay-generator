@@ -31,10 +31,10 @@
     <nav>
       <a href="/stream-overlay-generator/">Back to All Generators</a>
     </nav>
-    <h1>Single Speaker Overlay Generator
+    <h1>Side by Side - 2 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/single-speaker.png"></img>
+      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/side-by-side.png"></img>
     
     </h1>
 
@@ -164,7 +164,7 @@
       $(document).ready(function() {
         Overlay = {}
         Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
-        let speakerJSON = [{"id":1,"name":{"text":"Speaker (she/her)","font-and-size":"40px Comfortaa","x":"40","y":"685"},"twitter":{"text":"@speaker","font-and-size":"30px Comfortaa","x":"900","y":"680"},"overlay":{"x":"0","y":"620","width":"1280","height":"100"}}];
+        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"20px Comfortaa","x":"20","y":"698"},"twitter":{"text":"@1st-speaker","font-and-size":"18px Comfortaa","x":"475","y":"698"},"overlay":{"x":"0","y":"660","width":"620","height":"60"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"20px Comfortaa","x":"660","y":"698"},"twitter":{"text":"@2nd-speaker","font-and-size":"18px Comfortaa","x":"1100","y":"698"},"overlay":{"x":"640","y":"660","width":"620","height":"60"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
         let formView = new FormView(speakersList);

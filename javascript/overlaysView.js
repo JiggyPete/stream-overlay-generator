@@ -1,4 +1,5 @@
-TextColour = "#303030"
+BlackTextColour = "#303030"
+YellowTextColour = "#ffff80"
 
 let OverlaysView = class {
   constructor(speakersList) {
@@ -28,50 +29,28 @@ let OverlaysView = class {
 
   _drawOverlay(speaker, context) {
     this._drawOverlayImage(speaker, context)
-    context.fillStyle = TextColour
+    context.fillStyle = BlackTextColour
 
 
     setTimeout(function() {
       context.font = speaker.nameFontAndSize();
-      context.fillStyle = TextColour
+      context.fillStyle = BlackTextColour
       context.fillText(speaker.name(), speaker.nameX(), speaker.nameY());
 
       context.font = speaker.twitterFontAndSize();
+      context.fillStyle = YellowTextColour
       context.fillText(speaker.twitter(), speaker.twitterX(), speaker.twitterY());
 
-    }, 100)
+    }, 500)
   }
 
   _drawOverlayImage(speaker, context) {
     var img = new Image();
     img.onload = function(){
         context.imageSmoothingEnabled = true;
-        // context.drawImage(img, speaker.overlayX(), speaker.overlayY(), speaker.overlayWidth(), speaker.overlayHeight());
-        context.drawImage(img, speaker.overlayX(), speaker.overlayY(),);
+        context.drawImage(img, speaker.overlayX(), speaker.overlayY(), speaker.overlayWidth(), speaker.overlayHeight());
     }
 
     img.src = Overlay.path
   }
-
-  _drawName(speaker, context) {
-    context.font = speaker.nameFontAndSize();
-    context.letterSpacing = "100px"
-    context.fillStyle ="#303030"
-
-    context.fillText(speaker.name(), speaker.nameX(), speaker.nameY());
-  }
-
-  _drawTwitter(speaker, context) {
-    context.font = speaker.twitterFontAndSize();
-    context.letterSpacing = "100px"
-    context.fillStyle ="#303030"
-
-    context.fillText(speaker.twitter(), speaker.twitterX(), speaker.twitterY());
-  }
-
-  _drawNameAndTwitter(speaker, context) {
-    this._drawName(speaker, context)
-    this._drawTwitter(speaker, context)
-  }
-
 }

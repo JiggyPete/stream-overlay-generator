@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speaker.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speakersList.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/overlaysView.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/formView.js"></script>
+    <script type="text/javascript" src="/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/javascript/formView.js"></script>
 
     <style>
       body {
@@ -29,19 +29,19 @@
   </head>
   <body>
     <nav>
-      <a href="/stream-overlay-generator/">Back to All Generators</a>
+      <a href="/">Back to All Generators</a>
     </nav>
-    <h1>Side by Side Overlay Generator
+    <h1>Side by Side - 2 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/side-by-side.png"></img>
+      <img class="streamyard-icon" src="/images/streamyard/side-by-side.png"></img>
     
     </h1>
 
     <br/>
     Right click on the image below and select "Save As"
     <br/>
-    <canvas id="myCanvas" width="1280" height="780" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="myCanvas" width="1280" height="720" style="border:1px solid #d3d3d3;"></canvas>
     <br/>
 
 
@@ -51,7 +51,7 @@
       <table>
         <tr>
           <td class="label-column">
-            <label>Speaker name:</label>
+            <label>Speaker name and pronouns:</label>
           </td>
           <td class="input-column">
             <input type="text" id="name" model-attribute-name="nameValue"></input>
@@ -141,14 +141,30 @@
             <input type="text" id="overlayY" model-attribute-name="overlayYValue"></input>
           </td>
         </tr>
+        <tr>
+          <td class="label-column">
+            <label>Width:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayWidth" model-attribute-name="overlayWidthValue"></input>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-column">
+            <label>Height:</label>
+          </td>
+          <td class="input-column">
+            <input type="text" id="overlayHeight" model-attribute-name="overlayHeightValue"></input>
+          </td>
+        </tr>
       </table>
 
     </div>
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "/stream-overlay-generator/images/overlay.png"
-        let speakerJSON = [{"id":1,"name":{"text":"First Speaker","font-and-size":"25px Comfortaa","x":"20","y":"640"},"twitter":{"text":"@1st-speaker","font-and-size":"25px Comfortaa","x":"270","y":"640"},"overlay":{"x":"0","y":"600"}},{"id":2,"name":{"text":"Second Speaker","font-and-size":"25px Comfortaa","x":"660","y":"640"},"twitter":{"text":"@2nd-speaker","font-and-size":"25px Comfortaa","x":"890","y":"640"},"overlay":{"x":"640","y":"600"}}];
+        Overlay.path = "/images/overlays/big.svg"
+        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (he/him)","font-and-size":"20px Comfortaa","x":"20","y":"698"},"twitter":{"text":"@1st-speaker","font-and-size":"18px Comfortaa","x":"475","y":"698"},"overlay":{"x":"0","y":"660","width":"620","height":"60"}},{"id":2,"name":{"text":"Second Speaker (he/him)","font-and-size":"20px Comfortaa","x":"660","y":"698"},"twitter":{"text":"@2nd-speaker","font-and-size":"18px Comfortaa","x":"1100","y":"698"},"overlay":{"x":"640","y":"660","width":"620","height":"60"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
         let formView = new FormView(speakersList);
