@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="/javascript/speaker.js"></script>
-    <script type="text/javascript" src="/javascript/speakersList.js"></script>
-    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
-    <script type="text/javascript" src="/javascript/formView.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/stream-overlay-generator/javascript/formView.js"></script>
 
     <style>
       body {
@@ -29,12 +29,12 @@
   </head>
   <body>
     <nav>
-      <a href="/">Back to All Generators</a>
+      <a href="/stream-overlay-generator/">Back to All Generators</a>
     </nav>
-    <h1>Side by Side - 2 Speakers Overlay Generator
+    <h1>Fill Screen - 4 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/images/streamyard/side-by-side.png"></img>
+      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/fill-screen.png"></img>
     
     </h1>
 
@@ -163,8 +163,8 @@
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "/images/overlays/big.svg"
-        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (he/him)","font-and-size":"20px Comfortaa","x":"20","y":"698"},"twitter":{"text":"@1st-speaker","font-and-size":"18px Comfortaa","x":"475","y":"698"},"overlay":{"x":"0","y":"660","width":"620","height":"60"}},{"id":2,"name":{"text":"Second Speaker (he/him)","font-and-size":"20px Comfortaa","x":"660","y":"698"},"twitter":{"text":"@2nd-speaker","font-and-size":"18px Comfortaa","x":"1100","y":"698"},"overlay":{"x":"640","y":"660","width":"620","height":"60"}}];
+        Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
+        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"18px Comfortaa","x":"15","y":"350"},"twitter":{"text":"@1st-speaker","font-and-size":"16px Comfortaa","x":"510","y":"350"},"overlay":{"x":"0","y":"320","width":"638","height":"50"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"18px Comfortaa","x":"655","y":"350"},"twitter":{"text":"@2nd-speaker","font-and-size":"16px Comfortaa","x":"1140","y":"350"},"overlay":{"x":"642","y":"320","width":"638","height":"50"}},{"id":3,"name":{"text":"Third Speaker (he/him)","font-and-size":"18px Comfortaa","x":"15","y":"702"},"twitter":{"text":"@3rd-speaker","font-and-size":"16px Comfortaa","x":"510","y":"700"},"overlay":{"x":"0","y":"670","width":"638","height":"50"}},{"id":4,"name":{"text":"Fourth Speaker (she/her)","font-and-size":"18px Comfortaa","x":"655","y":"702"},"twitter":{"text":"@4th-speaker","font-and-size":"16px Comfortaa","x":"1140","y":"700"},"overlay":{"x":"642","y":"670","width":"638","height":"50"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
         let formView = new FormView(speakersList);

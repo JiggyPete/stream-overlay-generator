@@ -31,10 +31,10 @@
     <nav>
       <a href="/">Back to All Generators</a>
     </nav>
-    <h1>In Set - 2 Speakers Overlay Generator
+    <h1>Large and Small - 2 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/images/streamyard/2-speakers.png"></img>
+      <img class="streamyard-icon" src="/images/streamyard/large-and-small.png"></img>
     
     </h1>
 
@@ -164,7 +164,7 @@
       $(document).ready(function() {
         Overlay = {}
         Overlay.path = "/images/overlays/big.svg"
-        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (he/him)","font-and-size":"20px Comfortaa","x":"40","y":"598"},"twitter":{"text":"@1st-speaker","font-and-size":"18px Comfortaa","x":"475","y":"598"},"overlay":{"x":"25","y":"560","width":"605","height":"60"}},{"id":2,"name":{"text":"Second Speaker (he/him)","font-and-size":"20px Comfortaa","x":"665","y":"598"},"twitter":{"text":"@2nd-speaker","font-and-size":"18px Comfortaa","x":"1100","y":"598"},"overlay":{"x":"650","y":"560","width":"605","height":"60"}}];
+        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"18px Comfortaa","x":"40","y":"345"},"twitter":{"text":"@1st-speaker","font-and-size":"14px Comfortaa","x":"520","y":"345"},"overlay":{"x":"25","y":"320","width":"605","height":"40"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"18px Comfortaa","x":"665","y":"345"},"twitter":{"text":"@2nd-speaker","font-and-size":"14px Comfortaa","x":"1140","y":"345"},"overlay":{"x":"653","y":"320","width":"605","height":"40"}},{"id":3,"name":{"text":"Third Speaker (he/him)","font-and-size":"18px Comfortaa","x":"40","y":"702"},"twitter":{"text":"@3rd-speaker","font-and-size":"14px Comfortaa","x":"520","y":"700"},"overlay":{"x":"25","y":"675","width":"605","height":"40"}},{"id":4,"name":{"text":"Fourth Speaker (she/her)","font-and-size":"18px Comfortaa","x":"665","y":"702"},"twitter":{"text":"@4th-speaker","font-and-size":"14px Comfortaa","x":"1140","y":"700"},"overlay":{"x":"653","y":"675","width":"605","height":"40"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
         let formView = new FormView(speakersList);

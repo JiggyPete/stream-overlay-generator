@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speaker.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speakersList.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/overlaysView.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/formView.js"></script>
+    <script type="text/javascript" src="/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/javascript/formView.js"></script>
 
     <style>
       body {
@@ -29,12 +29,12 @@
   </head>
   <body>
     <nav>
-      <a href="/stream-overlay-generator/">Back to All Generators</a>
+      <a href="/">Back to All Generators</a>
     </nav>
-    <h1>Side by Side - 3 Speakers Overlay Generator
+    <h1>Fill Screen - 3 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/side-by-side.png"></img>
+      <img class="streamyard-icon" src="/images/streamyard/side-by-side.png"></img>
     
     </h1>
 
@@ -163,7 +163,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
+        Overlay.path = "/images/overlays/big.svg"
         let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"12px Comfortaa","x":"10","y":"705"},"twitter":{"text":"@1st-speaker","font-and-size":"14px Comfortaa","x":"310","y":"705"},"overlay":{"x":"0","y":"680","width":"420","height":"40"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"12px Comfortaa","x":"440","y":"705"},"twitter":{"text":"@2nd-speaker","font-and-size":"14px Comfortaa","x":"730","y":"705"},"overlay":{"x":"430","y":"680","width":"420","height":"40"}},{"id":3,"name":{"text":"Third Speaker (he/him)","font-and-size":"12px Comfortaa","x":"870","y":"705"},"twitter":{"text":"@2nd-speaker","font-and-size":"14px Comfortaa","x":"1160","y":"705"},"overlay":{"x":"860","y":"680","width":"420","height":"40"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);

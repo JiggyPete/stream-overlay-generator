@@ -31,10 +31,10 @@
     <nav>
       <a href="/stream-overlay-generator/">Back to All Generators</a>
     </nav>
-    <h1>In Set - 4 Speakers Overlay Generator
+    <h1>Fill Screen - 5 Speakers Overlay Generator
 
     
-      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/in-set.png"></img>
+      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/fill-screen.png"></img>
     
     </h1>
 
@@ -164,7 +164,7 @@
       $(document).ready(function() {
         Overlay = {}
         Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
-        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"18px Comfortaa","x":"40","y":"345"},"twitter":{"text":"@1st-speaker","font-and-size":"14px Comfortaa","x":"520","y":"345"},"overlay":{"x":"25","y":"320","width":"605","height":"40"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"18px Comfortaa","x":"665","y":"345"},"twitter":{"text":"@2nd-speaker","font-and-size":"14px Comfortaa","x":"1140","y":"345"},"overlay":{"x":"653","y":"320","width":"605","height":"40"}},{"id":3,"name":{"text":"Third Speaker (he/him)","font-and-size":"18px Comfortaa","x":"40","y":"702"},"twitter":{"text":"@3rd-speaker","font-and-size":"14px Comfortaa","x":"520","y":"700"},"overlay":{"x":"25","y":"675","width":"605","height":"40"}},{"id":4,"name":{"text":"Fourth Speaker (she/her)","font-and-size":"18px Comfortaa","x":"665","y":"702"},"twitter":{"text":"@4th-speaker","font-and-size":"14px Comfortaa","x":"1140","y":"700"},"overlay":{"x":"653","y":"675","width":"605","height":"40"}}];
+        let speakerJSON = [{"id":1,"name":{"text":"First Speaker (she/her)","font-and-size":"16px Comfortaa","x":"10","y":"345"},"twitter":{"text":"@1st-speaker","font-and-size":"14px Comfortaa","x":"310","y":"345"},"overlay":{"x":"0","y":"320","width":"425","height":"40"}},{"id":2,"name":{"text":"Second Speaker (they/them)","font-and-size":"12px Comfortaa","x":"440","y":"345"},"twitter":{"text":"@2nd-speaker","font-and-size":"14px Comfortaa","x":"730","y":"345"},"overlay":{"x":"425","y":"320","width":"425","height":"40"}},{"id":3,"name":{"text":"Third Speaker (he/him)","font-and-size":"16px Comfortaa","x":"870","y":"345"},"twitter":{"text":"@3rd-speaker","font-and-size":"14px Comfortaa","x":"1160","y":"345"},"overlay":{"x":"855","y":"320","width":"425","height":"40"}},{"id":4,"name":{"text":"Fourth Speaker (he/him)","font-and-size":"14px Comfortaa","x":"650","y":"705"},"twitter":{"text":"@4th-speaker","font-and-size":"14px Comfortaa","x":"945","y":"705"},"overlay":{"x":"640","y":"680","width":"425","height":"40"}},{"id":5,"name":{"text":"Fifth Speaker (he/him)","font-and-size":"14px Comfortaa","x":"225","y":"705"},"twitter":{"text":"@5th-speaker","font-and-size":"14px Comfortaa","x":"520","y":"705"},"overlay":{"x":"212","y":"680","width":"425","height":"40"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
         let formView = new FormView(speakersList);

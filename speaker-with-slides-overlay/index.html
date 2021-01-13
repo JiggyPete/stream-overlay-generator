@@ -5,10 +5,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speaker.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/speakersList.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/overlaysView.js"></script>
-    <script type="text/javascript" src="/stream-overlay-generator/javascript/formView.js"></script>
+    <script type="text/javascript" src="/javascript/speaker.js"></script>
+    <script type="text/javascript" src="/javascript/speakersList.js"></script>
+    <script type="text/javascript" src="/javascript/overlaysView.js"></script>
+    <script type="text/javascript" src="/javascript/formView.js"></script>
 
     <style>
       body {
@@ -29,12 +29,12 @@
   </head>
   <body>
     <nav>
-      <a href="/stream-overlay-generator/">Back to All Generators</a>
+      <a href="/">Back to All Generators</a>
     </nav>
     <h1>Speaker With Slides Overlay Generator
 
     
-      <img class="streamyard-icon" src="/stream-overlay-generator/images/streamyard/speaker-with-slides.png"></img>
+      <img class="streamyard-icon" src="/images/streamyard/speaker-with-slides.png"></img>
     
     </h1>
 
@@ -163,7 +163,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         Overlay = {}
-        Overlay.path = "/stream-overlay-generator/images/overlays/big.svg"
+        Overlay.path = "/images/overlays/big.svg"
         let speakerJSON = [{"id":1,"name":{"text":"Speaker","font-and-size":"25px Comfortaa","x":"100","y":"540"},"twitter":{"text":"@speaker","font-and-size":"25px Comfortaa","x":"340","y":"540"},"overlay":{"x":"80","y":"500"}}];
         let speakersList = new SpeakersList(speakerJSON);
         let overlaysView = new OverlaysView(speakersList);
